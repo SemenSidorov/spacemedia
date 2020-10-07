@@ -1,0 +1,62 @@
+@import 'base/fonts';
+
+@import 'variable';
+
+@import "common/reset";
+
+@import 'common/typography', 'common/common';
+
+@import "blocks/header/header";
+
+@import "blocks/header/btn-menu";
+
+@import "blocks/footer/footer";
+
+@import "blocks/main-title";
+
+@import "blocks/about";
+
+@import "blocks/statistics";
+
+@import "blocks/project";
+
+@import "blocks/services";
+
+@import "blocks/offers";
+
+@import "blocks/team";
+
+@import "blocks/contact";
+
+@import "blocks/portfolio";
+
+@import "blocks/tools";
+
+@import "blocks/special";
+
+@import "blocks/pagination";
+
+//adaptive
+
+@import "common/common-adaptive";
+
+@import "blocks/header/header-adaptive";
+
+@import "blocks/footer/footer-adaptive";
+
+@import "blocks/contacts-adaptive";
+
+@import "blocks/about-adaptive";
+
+@import "blocks/services-adaptive";
+
+@import "blocks/team-adaptive";
+
+@import "blocks/tools-adaptive";
+
+@import "blocks/portfolio-adaptive";
+
+@import "blocks/special-adaptive";
+
+@import "blocks/project-adaptive";
+

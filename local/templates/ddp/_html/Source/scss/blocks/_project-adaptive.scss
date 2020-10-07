@@ -1,0 +1,15 @@
+@media all and (max-width: 600px){
+  .project-block {
+    margin-bottom: 80px;
+    .arrow {
+      top: auto;
+      bottom: -60px;
+    }
+    .arrow--prev {
+      left: 30%;
+    }
+    .arrow--next {
+      right: 30%;
+    }
+  }
+}

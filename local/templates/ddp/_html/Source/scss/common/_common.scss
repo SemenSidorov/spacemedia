@@ -1,0 +1,377 @@
+.layout{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.cosmos {
+  width: 100%;
+  margin-bottom: 70px;
+  position: relative;
+  .section {
+    margin-bottom: 0;
+  }
+
+  &-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1250px;
+    height: 1050px;
+    overflow: hidden;
+
+    .orbita {
+      position: absolute;
+      top: -320px;
+      right: -60px;
+      transform: rotate(18deg);
+      max-width: 1250px;
+      width: 100%;
+      height: 100%;
+    }
+    #star {
+      font-weight: bold;
+      padding-left: 42px;
+      background: url("../images/svg/star.svg") left no-repeat;
+      background-size: 40px;
+      line-height: 1.5;
+      position: absolute;
+      z-index: 9;
+      min-height: 30px;
+      min-width: 30px;
+      top: 0;
+      left: 194px;
+      display: flex;
+      align-items: center;
+    }
+    .animate {
+      animation: animX 13s cubic-bezier(0, 0, 1, -0.75) infinite,
+      animY 13s cubic-bezier(0, 0, 1, 0.9) infinite;
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+    #starTwo {
+      font-weight: bold;
+      padding-left: 42px;
+      background: url("../images/svg/star.svg") left no-repeat;
+      background-size: 40px;
+      line-height: 1.5;
+      position: absolute;
+      z-index: 9;
+      min-height: 30px;
+      min-width: 30px;
+      top: -60px;
+      left: 508px;
+      display: flex;
+      align-items: center;
+    }
+    .animate-two {
+      animation: animTwoX 13s cubic-bezier(0, 0, 1, -2.3) 5s infinite,
+      animTwoY 13s cubic-bezier(0, 0, 1, 0.7) 5s infinite;
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+    .star-text {
+      display: none;
+      position: absolute;
+      left: 40px;
+      &--active {
+        display: block;
+      }
+    }
+  }
+}
+
+@keyframes animX {
+  from {
+    left: 194px;
+  }
+  to {
+    left: 710px;
+  }
+}
+
+@keyframes animY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 700px;
+  }
+}
+
+@keyframes animTwoX {
+  from {
+    left: 508px;
+  }
+  to {
+    left: 710px;
+  }
+}
+
+@keyframes animTwoY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 650px;
+  }
+}
+
+.btn{
+  cursor: pointer;
+  display: block;
+  outline: none;
+  border: none;
+  background-color: $color-cyan;
+  @include text(14px, 700, $color-white);
+  text-transform: uppercase;
+  padding: 18px 47px;
+  border-radius: 3px;
+  transition: .5s;
+  &:hover {
+    color: white;
+    transition: .5s;
+    background-color: $color-blue-light ;
+  }
+}
+
+input.btn {
+  max-width: 180px;
+}
+
+.arrow {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: absolute;
+  top: 45%;
+  width: 44px;
+  height: 44px;
+  background-size: 44px;
+  z-index: 1;
+  transition: .5s;
+  &--prev {
+    left: 3%;
+    background: url("../images/svg/l.svg") center no-repeat;
+    filter: opacity(30%);
+  }
+  &--next {
+    right: 3%;
+    background: url("../images/svg/r.svg") center no-repeat;
+    filter: opacity(30%);
+  }
+  &:hover {
+    transition: .5s;
+    filter: none;
+  }
+}
+
+.section {
+  max-width: 1280px;
+  margin: 0 auto 75px;
+  padding: 0 55px;
+  width: 100%;
+}
+
+.section--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section--mb {
+  margin-bottom: 120px;
+}
+
+.section--mb_middle {
+  margin-bottom: 100px;
+}
+
+.section--min_mb {
+  margin-bottom: 60px;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  background: url("../images/svg/logo.svg") center no-repeat;
+  background-size: 90px;
+  text-indent: -999px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &__link {
+    font-size: inherit;
+    margin: 0 25px;
+    transition: .5s;
+    &--active {
+      color: $color-cyan;
+    }
+    &:hover {
+      color: $color-cyan;
+      transition: .5s;
+    }
+    &:nth-last-of-type(1){
+      margin-right: 0;
+    }
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+}
+
+.content {
+  min-height: calc(100vh - 240px);
+}
+
+.facebook {
+  background: url("../images/svg/fb.svg") center no-repeat;
+  background-size: 40px 40px;
+  width: 25px;
+  height: 40px;
+}
+
+.instagram {
+  background: url("../images/svg/insta.svg") center no-repeat;
+  background-size: 41px 40px;
+  width: 41px;
+  height: 40px;
+}
+
+.text-bigger {
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+.plus {
+  color: $color-cyan;
+  font-weight: normal;
+}
+
+.title {
+  margin-bottom: 55px;
+  position: relative;
+  &-info {
+    max-width: 1280px;
+    margin: 0 auto;
+    h1 {
+      max-width: 730px;
+      text-transform: none;
+    }
+    p {
+      max-width: 765px;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+    h2 {
+      font-size: 38px;
+      text-transform: none;
+    }
+  }
+  &-pic {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 450px;
+    .man{
+      position: absolute;
+      top: -30px;
+      right: 0;
+      width: 70%;
+      z-index: -1;
+    }
+    .moon {
+      position: absolute;
+      top: -125px;
+      left: 100%;
+      z-index: -1;
+    }
+  }
+}
+
+.moon--animate {
+  animation: animMoon 40s linear infinite;
+}
+
+@keyframes animMoon {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -350%;
+  }
+}
+
+.man--animate {
+  animation: animMan 2s linear infinite alternate;
+}
+
+
+@keyframes animMan {
+  from {
+    top: -30px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.man-main {
+  display: none;
+}
+
+.no-page {
+  h1 {
+    max-width: none;
+    margin-bottom: 20px;
+  }
+  span {
+    color: $color-cyan;
+    margin-bottom: 20px;
+    display: block;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+  .title-pic .moon {
+    z-index: 0;
+  }
+  .title-pic .man {
+    z-index: 0;
+  }
+  a {
+    font-size: 18px;
+  }
+}
+
+ol>li::after{
+  border: none;
+  width: 0;
+  height: 0;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+font.text {
+  margin-bottom: 20px;
+  a {
+    margin: 0 5px;
+  }
+  &:nth-last-of-type(1){
+    margin-bottom: 0;
+  }
+}
+
+.div-hidden {
+  display: none;
+}

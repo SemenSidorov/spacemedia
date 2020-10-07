@@ -1,0 +1,63 @@
+@media all and (max-width: 1145px){
+  .сosmonaut {
+    display: none;
+  }
+  .cosmos-wrapper #star {
+    display: none;
+  }
+
+  .cosmos-wrapper #starTwo {
+    display: none;
+  }
+
+  .man-main {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 250px;
+    max-width: 300px;
+  }
+}
+
+@media all and (max-width: 1000px){
+  .man {
+    display: none;
+  }
+  .main-title__text {
+    margin-left: 0;
+  }
+  .man-main {
+    top: 400px;
+  }
+  .main-title {
+    margin-bottom: 300px;
+  }
+  .cosmos-wrapper {
+    width: 150%;
+    height: 100%;
+  }
+}
+
+@media all and (max-width: 600px){
+  .section {
+    padding: 0 20px;
+    margin-bottom: 55px;
+  }
+  .cosmos {
+    margin-bottom: 55px;
+  }
+  .main-title h1 {
+    font-size: 36px;
+  }
+  .title-info h2 {
+    font-size: 30px;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+  input.btn {
+    max-width: 100% !important;
+  }
+}
+

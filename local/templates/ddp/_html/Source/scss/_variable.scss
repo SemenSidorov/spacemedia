@@ -1,0 +1,38 @@
+// COLOR
+$color-white: #fff;
+$color-cyan: #21C0D0;
+$color-blue-dark: #23446C;
+$color-blue-input: #071C2D;
+$color-blue-light: #4298EC;
+$color-blue-footer: #062554;
+$color-border: #E7EDF6;
+$color-time: #7E97BB;
+
+//  Шрифты
+$font-ruda: 'Ruda',  Arial, Helvetica, sans-serif;
+
+// Тень блока
+$box-shadow-light: 0px 5px 25px 5px #52BEFF;
+$box-shadow-min: 0 0 10px 0px #52BEFF;
+
+// Миксины @include text()
+
+@mixin text ($size, $weight, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+// Наследование
+//  @extend %center;
+
+%center {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 55px;
+
+  @media all and (max-width: 600px){
+    padding: 0 20px;
+  }
+}
+

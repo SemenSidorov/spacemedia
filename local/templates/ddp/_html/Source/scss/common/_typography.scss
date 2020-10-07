@@ -1,0 +1,169 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+    font-size: 18px;
+    line-height: 1;
+    font-family: $font-ruda;
+    font-weight: 400;
+	color: $color-white;
+	background: url("../images/general/main_bg.jpg") top left repeat;
+	position: relative;
+	z-index: -1;
+	&::before {
+		content: "";
+		background: url("../images/general/top_bg.png") top left no-repeat;
+		width: 100%;
+		height: 935px;
+		position: absolute;
+		z-index: -1;
+	}
+}
+
+a {
+	color: $color-white;
+	text-decoration: none;
+	@include text(16px, 700, $color-white);
+	transition: .5s;
+	&:hover {
+		color: $color-cyan;
+		transition: .5s;
+	}
+}
+
+// Новые заголовки с макета
+
+h1 {
+	@include text(70px, 700, $color-white);
+	margin-bottom: 65px;
+	text-transform: uppercase;
+	span{
+		font-weight: 700;
+	}
+	span:nth-last-of-type(1){
+		color: $color-cyan;
+	}
+}
+
+h2 {
+	@include text(36px, 700, $color-white);
+	text-transform: uppercase;
+	margin-bottom: 25px;
+	span {
+		color: $color-cyan;
+	}
+}
+
+h3 {
+	@include text(30px, 800, $color-cyan);
+	margin-bottom: 15px;
+}
+
+h4 {
+	@include text(24px, 700, $color-blue-dark);
+}
+
+h5 {
+	@include text(22px, 700, $color-white);
+	margin-bottom: 10px;
+}
+
+h6 {
+	@include text(18px, 400, $color-cyan);
+	margin-bottom: 20px;
+}
+
+p {
+ 	margin-bottom:25px;
+	@include text(18px, 400, inherit);
+	line-height: 1.6;
+}
+
+span {
+	@include text(inherit, inherit, inherit);
+}
+
+label {
+	margin-bottom: 10px;
+	font-weight: 500;
+	display: block;
+}
+
+input {
+	padding: 15px 20px;
+	max-width: 585px;
+	width: 100%;
+	height: 52px;
+	color: $color-blue-input;
+	background: $color-white;
+	border-radius: 3px;
+	border: 1px solid $color-white;
+	margin-bottom: 30px;
+	font-size: 18px;
+	&::placeholder{
+		color: $color-blue-input;
+		font-size: 18px;
+	}
+}
+
+textarea {
+	display: block;
+	resize: none;
+	padding: 15px 20px;
+	max-width: 585px;
+	width: 100%;
+	color: $color-blue-input;
+	border-radius: 3px;
+	background-color: $color-white;
+	border: 1px solid $color-white;
+	margin-bottom: 30px;
+	font-size: 18px;
+	font-family: $font-ruda;
+	&::placeholder{
+		color: $color-blue-input;
+		font-size: 18px;
+		font-family: $font-ruda;
+	}
+}
+
+ul {
+	margin: 0;
+	list-style-type:none;
+	padding: 0;
+}
+
+li {
+	position: relative;
+	margin-bottom: 20px;
+	@include text(18px, 400, $color-blue-dark);
+	padding-left: 23px;
+	line-height: 1.6;
+	&::after{
+		content: "";
+		border: 7px solid transparent; border-left: 8px solid $color-cyan;
+		width: 13px;
+		height: 10px;
+		position: absolute;
+		left: 0;
+		top: 7px;
+	}
+}
+
+time {
+	@include text(16px, 400, $color-blue-input);
+}
+
+@media all and (max-width: 600px){
+	h1 {
+		font-size: 36px;
+	}
+	h2 {
+		font-size: 30px;
+	}
+	h3 {
+		font-size: 26px;
+	}
+}
+

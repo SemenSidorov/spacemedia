@@ -1,0 +1,81 @@
+.btn-menu {
+  display: none;
+  cursor: pointer;
+  padding-left: 1.25em;
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  z-index: 101;
+  width: 27px;
+  height: 20px;
+}
+.menu-span {
+  backface-visibility: hidden;
+  position: absolute;
+  left: 0;
+  border: 2px solid $color-cyan;
+  border-radius: 1.5px;
+  width: 100%;
+  transition: 0.55s;
+}
+.menu-top {
+  top: 0;
+}
+.menu-middle {
+  top: 10px;
+}
+.menu-bottom {
+  top: 20px;
+}
+.menu-top-click {
+  backface-visibility: hidden;
+  top: 10px;
+  transform: rotate(50deg);
+  transition: 0.55s 0.5s;
+}
+.menu-middle-click {
+  opacity: 0;
+}
+.menu-bottom-click {
+  backface-visibility: hidden;
+  top: 10px;
+  transform: rotate(-410deg);
+  transition: 0.55s 0.5s;
+}
+
+.adaptive-menu {
+  box-shadow: $box-shadow-min;
+  display: flex;
+  width: 100%;
+  background-color: $color-blue-footer;
+  padding: 40px;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transform: translateY(-400px);
+  transition: .5s;
+  opacity: 0;
+  .nav__link {
+    margin: 0 0 32px;
+    font-size: 20px;
+    font-weight: 500;
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+    }
+  }
+}
+
+.active-adaptive-menu .adaptive-menu {
+  transform: translateY(0);
+  transition: .5s;
+  opacity: 1;
+}
+
+
+@media all and (max-width: 1000px){
+  .btn-menu {
+    display: block;
+  }
+}

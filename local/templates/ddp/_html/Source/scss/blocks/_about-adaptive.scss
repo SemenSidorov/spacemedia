@@ -1,0 +1,90 @@
+@media all and (max-width: 1200px){
+  .main-about .сosmonaut {
+    top: -350px;
+    max-width: 360px;
+  }
+
+  @keyframes animCosmonautY {
+    from {
+      top: -350px;
+    }
+    to {
+      top: -320px;
+    }
+  }
+
+  .main-about__info {
+    padding-right: 20px;
+  }
+  .about-progress-item {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .about-progress-awards {
+    align-self: center;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+  .about-progress-info {
+    max-width: none;
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
+@media all and (max-width: 1000px){
+  .statistics {
+    ol {
+      flex-wrap: wrap;
+      li {
+        width: 35%;
+        max-width: none;
+        margin-bottom: 20px!important;
+        &:nth-last-of-type(1){
+          margin-right: 20px;
+        }
+      }
+    }
+
+  }
+  .main-about {
+    flex-direction: column;
+  }
+  .main-about__info {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 40px;
+    .btn {
+      align-self: center;
+    }
+  }
+  .main-about__list {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 600px){
+  .about-progress-item {
+    width: 100%;
+  }
+  .main-about__list {
+    padding: 25px 30px;
+  }
+}
+
+@media all and (max-width: 500px){
+  .statistics {
+    ol {
+      li {
+        width: 100%;
+      }
+    }
+
+  }
+  .about-slider {
+    .slick-list {
+      height: 80px!important;
+    }
+  }
+}

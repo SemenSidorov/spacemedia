@@ -1,0 +1,32 @@
+@media all and (max-width: 1200px){
+  .special-content {
+    flex-direction: column;
+  }
+  .special-social {
+    margin-top: 40px;
+    margin-left: 0;
+    display: flex;
+    position: static;
+    a {
+      height: 50px;
+      width: 50px;
+      border-bottom: none;
+      border-right: 1px solid $color-blue-dark;
+    }
+  }
+  .special-article {
+    max-width: none;
+    h1 {
+      font-size: 50px;
+    }
+  }
+}
+
+@media all and (max-width: 600px){
+  .special-article {
+    padding: 40px 30px;
+    h1 {
+      font-size: 30px;
+    }
+  }
+}

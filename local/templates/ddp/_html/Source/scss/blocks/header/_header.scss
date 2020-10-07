@@ -1,0 +1,15 @@
+.header {
+  min-height: 162px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+  &-nav {
+    @include text(16px, 700, $color-white);
+    justify-content: flex-end;
+    text-transform: uppercase;
+  }
+}
+

@@ -1,0 +1,108 @@
+.special-head {
+  box-shadow: $box-shadow-min;
+  max-width: 1280px;
+  margin: -75px auto 0;
+  width: 100%;
+  max-height: 600px;
+  img {
+    width: 100%;
+    max-height: 600px;
+    height: 100%;
+  }
+}
+
+.special-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: -80px;
+}
+
+.special-article {
+  max-width: 970px;
+  width: 100%;
+  background-color: $color-white;
+  border-radius: 3px;
+  box-shadow: $box-shadow-min;
+  padding: 70px 75px;
+  h1 {
+    color: $color-blue-dark;
+    margin-bottom: 40px;
+  }
+  time {
+    color: $color-cyan;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: block;
+  }
+  p {
+    color: $color-blue-input;
+    margin-bottom: 40px;
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+    }
+  }
+}
+
+.special-social {
+  opacity: 0;
+  transition: .5s;
+  position: fixed;
+  top: 20%;
+  border: 1px solid $color-blue-dark;
+  border-radius: 3px;
+  &--active {
+    opacity: 1;
+    transition: .5s;
+
+  }
+  a {
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    border-bottom: 1px solid $color-blue-dark;
+    transition: .5s;
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    &:nth-last-of-type(1){
+      border: none;
+      border-radius: 0 0 3px 3px;
+    }
+    &:nth-of-type(1){
+      border-radius: 3px 3px 0 0;
+    }
+    &:hover {
+      transition: .5s;
+      background-color: $color-cyan;
+    }
+  }
+  .vk {
+    background-image: url("../images/svg/vk.svg");
+    &:hover {
+      background-image: url("../images/svg/vk-white.svg");
+    }
+  }
+  .ok {
+    background-image: url("../images/svg/ok.svg");
+    &:hover {
+      background-image: url("../images/svg/ok-white.svg");
+    }
+  }
+  .fb {
+    background-image: url("../images/svg/facebook.svg");
+    &:hover {
+      background-image: url("../images/svg/facebook-white.svg");
+    }
+  }
+  .tw {
+    background-image: url("../images/svg/tw.svg");
+    &:hover {
+      background-image: url("../images/svg/tw-white.svg");
+    }
+  }
+}

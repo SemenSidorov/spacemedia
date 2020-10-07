@@ -1,0 +1,33 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  &-block {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  &-slider {
+    display: flex;
+    box-shadow: $box-shadow-light;
+    border-radius: 3px;
+    background: #ffffff;
+    &__item {
+      max-width: 1170px;
+      min-height: 342px;
+      margin: 0 auto;
+      height: 100%;
+      display: flex!important;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-width: 1170px;
+        max-height: 342px;
+        height: 100%;
+      }
+    }
+  }
+  .btn {
+    align-self: center;
+  }
+
+}

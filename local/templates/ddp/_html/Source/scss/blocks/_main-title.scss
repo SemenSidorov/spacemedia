@@ -1,0 +1,25 @@
+.main-title {
+  width: 100%;
+  position: relative;
+  margin-bottom: 75px;
+  z-index: 8;
+  h1 {
+    @include text(48px, 800, $color-white);
+    margin-bottom: 25px;
+    letter-spacing: 1.92px;
+    span{
+      font-weight: 400;
+    }
+  }
+  &__text {
+    margin-left: 195px;
+    max-width: 500px;
+    margin-top: 47px;
+    margin-bottom: 160px;
+    .text-bigger {
+      font-size: 18px;
+    }
+  }
+}
+
+
